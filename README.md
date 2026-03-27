@@ -1,6 +1,9 @@
 # Education Intervention Effectiveness Dashboard (Power BI + SQL)
 
 ## Overview
+<img width="1262" height="722" alt="image" src="https://github.com/user-attachments/assets/df207542-8df0-474a-b6e3-88c1520dd205" />
+<img width="1262" height="716" alt="image" src="https://github.com/user-attachments/assets/09af10bd-5b8b-4952-9fe8-b2cc7ebdfd6a" />
+<img width="1258" height="716" alt="image" src="https://github.com/user-attachments/assets/a0e529ea-bf72-42a8-9ea9-03ee467475ee" />
 
 This project analyzes student risk, intervention participation, and academic outcomes across multiple schools.
 
