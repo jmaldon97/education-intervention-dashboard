@@ -15,9 +15,9 @@ The dashboard connects:
 
 ## Dashboard Preview
 
-![Overview](screenshots/overview.png)
-![School Detail](screenshots/school-detail.png)
-![Intervention Analysis](screenshots/intervention.png)
+<img width="1263" height="717" alt="image" src="https://github.com/user-attachments/assets/4938c285-97a0-401c-8564-40b6d194d9a8" />
+<img width="1257" height="710" alt="image" src="https://github.com/user-attachments/assets/1e7228b6-a94d-4fa8-8c8a-66328de84851" />
+<img width="1262" height="708" alt="image" src="https://github.com/user-attachments/assets/6d0791bc-d582-470a-864b-20faeec9f0af" />
 
 ---
 
