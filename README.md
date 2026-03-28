@@ -1,45 +1,65 @@
 # Education Intervention Effectiveness Dashboard (Power BI + SQL)
 
 ## Overview
-<img width="1262" height="722" alt="image" src="https://github.com/user-attachments/assets/df207542-8df0-474a-b6e3-88c1520dd205" />
-<img width="1262" height="716" alt="image" src="https://github.com/user-attachments/assets/09af10bd-5b8b-4952-9fe8-b2cc7ebdfd6a" />
-<img width="1258" height="716" alt="image" src="https://github.com/user-attachments/assets/a0e529ea-bf72-42a8-9ea9-03ee467475ee" />
 
 This project analyzes student risk, intervention participation, and academic outcomes across multiple schools.
 
-The goal is to answer a key question:
+**Key question:** Are intervention programs effectively improving student performance?
 
-**Are intervention programs effectively improving student performance?**
-
-The dashboard connects three critical components:
-- Student risk (who needs support)
-- Intervention participation (who is receiving support)
-- Academic outcomes (are students improving over time)
-
-Using simulated data, the project demonstrates how data can be used to evaluate program effectiveness and guide resource allocation.
+The dashboard connects:
+- Risk (who needs support)
+- Intervention (who is receiving support)
+- Outcomes (are students improving over time)
 
 ---
 
-## Tools Used
+## Dashboard Preview
 
-- Power BI (data visualization and dashboard design)
-- DAX (calculated measures and logic)
-- SQL Server (data modeling and data generation)
+![Overview](screenshots/overview.png)
+![School Detail](screenshots/school-detail.png)
+![Intervention Analysis](screenshots/intervention.png)
 
 ---
 
-## Data Model
+## Project Background
 
-A relational data model was built using SQL Server, including:
+This project simulates an educational analytics environment focused on evaluating student performance and intervention effectiveness across multiple schools.
 
-- **DimStudent** – student-level attributes
-- **DimSchool** – school-level information
-- **DimGrade** – grade-level structure
-- **DimIntervention** – intervention programs
-- **FactAssessment** – student performance scores (Bench 1 and Bench 3)
-- **FactInterventionParticipation** – intervention participation, status, and sessions attended
+From a data analyst perspective, the objective is to:
+- Identify at-risk students  
+- Assess whether intervention programs are reaching the right populations  
+- Determine whether those interventions are improving academic outcomes  
 
-The model supports filtering across schools, grades, and interventions while maintaining accurate aggregation.
+Key metrics analyzed include:
+- High-Risk Rate  
+- Intervention Rate  
+- Attendance Rate  
+- Academic Growth (Bench 1 → Bench 3)  
+
+---
+
+## Data Structure & Model
+
+A relational data model was built using SQL Server, consisting of:
+
+- **DimStudent** – student-level attributes  
+- **DimSchool** – school-level information  
+- **DimGrade** – grade structure  
+- **DimIntervention** – intervention programs  
+- **FactAssessment** – student performance scores (Bench 1 and Bench 3)  
+- **FactInterventionParticipation** – intervention participation, status, and sessions attended  
+
+The model supports filtering across schools, grades, and interventions while maintaining accurate aggregation and context-aware calculations.
+
+---
+
+## Executive Summary
+
+### Overview of Findings
+
+- Students receiving interventions start at a lower baseline but demonstrate significantly higher growth compared to non-intervention students  
+- Some schools show gaps between at-risk populations and intervention coverage, indicating opportunities for improved resource alignment  
+- Negative coverage gaps suggest certain schools are taking a proactive, preventative approach to student support  
 
 ---
 
@@ -47,8 +67,8 @@ The model supports filtering across schools, grades, and interventions while mai
 
 ### Benchmarks (Bench 1 vs Bench 3)
 
-- **Bench 1** represents an earlier assessment (starting point)
-- **Bench 3** represents a later assessment (ending point)
+- **Bench 1** represents an earlier assessment (starting point)  
+- **Bench 3** represents a later assessment (ending point)  
 
 Growth is calculated as:
 
@@ -68,79 +88,60 @@ The coverage gap measures alignment between student need and support:
 Coverage Gap = High-Risk Rate – Intervention Rate
 
 
-- Positive gap → underserved students
-- Near zero → strong alignment
-- Negative gap → proactive or broad intervention coverage
+- Positive gap → underserved students  
+- Near zero → strong alignment  
+- Negative gap → proactive or broad intervention coverage  
 
 ---
 
-## Dashboard Pages
+## Insights Deep Dive
 
-### 1. Overview (District-Level View)
+### 1. Risk Analysis
 
-Provides a high-level snapshot across all schools:
-
-- Total students
-- High-risk rate
-- Intervention rate
-- Attendance rate
-
-Visuals include:
-- Scatter plot (performance vs attendance)
-- Coverage gap by school
-- School comparison matrix
-
-**Purpose:**
-Identify which schools are performing well and which require attention.
+- Schools vary significantly in high-risk student percentages, indicating uneven distribution of academic need  
+- Some schools maintain low risk levels, potentially reflecting stronger baseline performance or early intervention strategies  
 
 ---
 
-### 2. School Detail (Drill-Down Analysis)
+### 2. Intervention Coverage
 
-Allows deeper analysis at the school level:
-
-- KPI metrics for selected school
-- Grade-level performance breakdown
-- Detailed matrix of risk, intervention, attendance, and outcomes
-
-**Purpose:**
-Diagnose where performance issues exist within a school.
+- Several schools exhibit positive coverage gaps, where not all high-risk students are receiving intervention support  
+- Negative gaps indicate proactive intervention strategies, where support extends beyond strictly high-risk populations  
 
 ---
 
-### 3. Intervention Analysis (Impact Evaluation)
+### 3. Intervention Effectiveness
 
-Focuses on intervention effectiveness:
-
-- Students in intervention
-- Completion rate
-- Average sessions attended
-- Growth (Bench 1 → Bench 3)
-
-Key visual:
-- Comparison of growth between intervention and non-intervention students
-
-**Key Insight:**
-Students receiving intervention demonstrate significantly greater growth compared to peers not in intervention.
+- Intervention students show greater academic growth between Bench 1 and Bench 3 compared to non-intervention students  
+- Growth trends suggest interventions are having a measurable positive impact on student outcomes  
 
 ---
 
-## Key Findings
+### 4. School-Level Variability
 
-- Intervention students start at a lower baseline but show stronger improvement over time
-- Non-intervention students start higher but show smaller gains
-- Some schools show gaps between at-risk students and intervention coverage
-- Negative coverage gaps suggest proactive or preventative intervention strategies
+- Performance, intervention rates, and outcomes vary significantly across schools  
+- Grade-level analysis reveals that performance challenges are often concentrated in specific grade bands rather than evenly distributed  
+
+---
+
+## Recommendations
+
+Based on the analysis, the following actions are recommended:
+
+- Increase intervention coverage in schools with large positive coverage gaps to ensure at-risk students receive adequate support  
+- Evaluate intervention targeting strategies in schools with negative gaps to ensure resources are efficiently allocated  
+- Expand intervention programs that demonstrate strong growth outcomes  
+- Monitor grade-level trends to apply targeted support where performance issues are concentrated  
 
 ---
 
 ## Features
 
-- Multi-page dashboard with intuitive navigation
-- Drillthrough functionality for school-level analysis
-- Dynamic filtering using slicers
-- Context-aware DAX measures
-- Intervention vs non-intervention comparison logic
+- Multi-page dashboard with intuitive navigation  
+- Drillthrough functionality for school-level analysis  
+- Dynamic filtering using slicers  
+- Context-aware DAX measures  
+- Intervention vs non-intervention comparison logic  
 
 ---
 
@@ -153,10 +154,19 @@ Students receiving intervention demonstrate significantly greater growth compare
 /docs
 
 
-- Screenshots: dashboard visuals
-- SQL: data model and data generation scripts
-- Power BI: `.pbix` file
-- Docs: project explanation and notes
+- Screenshots: dashboard visuals  
+- SQL: data model and data generation scripts  
+- Power BI: `.pbix` file  
+- Docs: project explanation and notes  
+
+---
+
+## Assumptions and Caveats
+
+- Data is simulated and designed to reflect realistic educational trends  
+- Benchmark dates (Bench 1 and Bench 3) represent fixed assessment periods  
+- Students may participate in multiple interventions, introducing some overlap in analysis  
+- Intervention participation is assumed to remain consistent between benchmark periods  
 
 ---
 
@@ -164,11 +174,11 @@ Students receiving intervention demonstrate significantly greater growth compare
 
 This project demonstrates how data can be used to:
 
-- identify at-risk populations
-- evaluate intervention effectiveness
-- support data-driven decision-making
+- Identify at-risk populations  
+- Evaluate intervention effectiveness  
+- Support data-driven decision-making  
 
-It is designed as a portfolio project showcasing end-to-end analytics development.
+It is designed as a portfolio project showcasing end-to-end analytics development, including data modeling, metric design, and insight generation.
 
 ---
 
