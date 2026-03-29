@@ -41,7 +41,7 @@ All schools demonstrate negative or neutral coverage gaps, meaning intervention 
 
 ### Intervention Effectiveness
 
-![Intervention Growth](screenshots/intervention.png)
+![Intervention Growth](screenshots/intervention-growth.png)
 
 Despite starting at a lower baseline, students in intervention programs show substantially higher growth between Bench 1 and Bench 3 compared to non-intervention peers, demonstrating that interventions are effectively improving student outcomes.
 
@@ -52,22 +52,6 @@ Despite starting at a lower baseline, students in intervention programs show sub
 ![Risk vs Intervention](screenshots/risk-vs-intervention.png)
 
 This view compares student risk levels to intervention coverage across schools. Variation in positioning highlights how well each school aligns support with need, with some schools demonstrating stronger alignment while others indicate opportunities to better target intervention resources.
-## Project Background
-
-This project simulates an educational analytics environment focused on evaluating student performance and intervention effectiveness across multiple schools.
-
-From a data analyst perspective, the objective is to:
-- Identify at-risk students  
-- Assess whether intervention programs are reaching the right populations  
-- Determine whether those interventions are improving academic outcomes  
-
-Key metrics analyzed include:
-- High-Risk Rate  
-- Intervention Rate  
-- Attendance Rate  
-- Academic Growth (Bench 1 → Bench 3)  
-
----
 
 ## Data Structure & Model
 
