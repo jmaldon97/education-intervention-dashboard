@@ -1,5 +1,9 @@
 # Education Intervention Effectiveness Dashboard (Power BI + SQL)
 
+A data-driven analysis of student risk, intervention coverage, and academic growth across schools.
+
+---
+
 ## Overview
 
 This project analyzes student risk, intervention participation, and academic outcomes across multiple schools.
@@ -29,13 +33,10 @@ The dashboard connects:
 ![Intervention Analysis](screenshots/intervention.png)
 
 ---
+
 ## Key Insights (Visual Walkthrough)
 
-### Intervention Coverage Alignment
-
-![Coverage Gap](screenshots/coverage-gap.png)
-
-All schools demonstrate negative or neutral coverage gaps, meaning intervention support meets or exceeds identified student risk. Larger negative gaps suggest that some schools are extending support beyond strictly high-risk students, reflecting a proactive or preventative approach while also presenting an opportunity to evaluate resource targeting.
+This section highlights the most important findings from the analysis using focused visuals.
 
 ---
 
@@ -47,11 +48,21 @@ Despite starting at a lower baseline, students in intervention programs show sub
 
 ---
 
+### Intervention Coverage Alignment
+
+![Coverage Gap](screenshots/coverage-gap.png)
+
+All schools demonstrate negative or neutral coverage gaps, meaning intervention support meets or exceeds identified student risk. Larger negative gaps suggest that some schools are extending support beyond strictly high-risk students, reflecting a proactive or preventative approach while also presenting an opportunity to evaluate resource targeting.
+
+---
+
 ### Risk vs Intervention Alignment
 
 ![Risk vs Intervention](screenshots/risk-vs-intervention.png)
 
 This view compares student risk levels to intervention coverage across schools. Variation in positioning highlights how well each school aligns support with need, with some schools demonstrating stronger alignment while others indicate opportunities to better target intervention resources.
+
+---
 
 ## Data Structure & Model
 
@@ -59,7 +70,9 @@ This view compares student risk levels to intervention coverage across schools. 
 
 ![Data Model](screenshots/data-model.png)
 
-The data model is structured as a star schema centered on student-level data. Dimension tables provide context for schools, grades, subjects, dates, and interventions, while fact tables capture assessment performance, attendance, and intervention participation. This design enables flexible and accurate analysis across multiple dimensions.
+The data model is structured as a star schema centered on student-level data. Dimension tables provide context for schools, grades, subjects, dates, and interventions, while fact tables capture assessment performance, attendance, and intervention participation.
+
+This structure enables flexible slicing across multiple dimensions while maintaining accurate aggregation and analytical consistency.
 
 ---
 
@@ -76,7 +89,24 @@ A relational data model was built using SQL Server, consisting of:
 - **FactAttendanceDaily** – daily attendance tracking  
 - **FactInterventionParticipation** – intervention participation, status, and sessions attended  
 
-The model supports filtering across schools, grades, subjects, and interventions while maintaining accurate aggregation and context-aware calculations.
+---
+
+## Project Background
+
+This project simulates an educational analytics environment focused on evaluating student performance and intervention effectiveness across multiple schools.
+
+From a data analyst perspective, the objective is to:
+- Identify at-risk students  
+- Assess whether intervention programs are reaching the right populations  
+- Determine whether those interventions are improving academic outcomes  
+
+Key metrics analyzed include:
+- High-Risk Rate  
+- Intervention Rate  
+- Attendance Rate  
+- Academic Growth (Bench 1 → Bench 3)  
+
+---
 
 ## Executive Summary
 
@@ -85,29 +115,6 @@ The model supports filtering across schools, grades, subjects, and interventions
 - Students receiving interventions start at a lower baseline but demonstrate significantly higher growth compared to non-intervention students  
 - Some schools show gaps between at-risk populations and intervention coverage, indicating opportunities for improved resource alignment  
 - Negative coverage gaps suggest certain schools are taking a proactive, preventative approach to student support  
-
----
-
-## Key Concepts
-
-### Benchmarks (Bench 1 vs Bench 3)
-
-- **Bench 1** represents an earlier assessment (starting point)  
-- **Bench 3** represents a later assessment (ending point)  
-
-Growth is calculated as:
-
-This allows measurement of student improvement over time.
-
----
-
-### Intervention Coverage Gap
-
-The coverage gap measures alignment between student need and support:
-
-- Positive gap → underserved students  
-- Near zero → strong alignment  
-- Negative gap → proactive or broad intervention coverage  
 
 ---
 
@@ -122,8 +129,9 @@ The coverage gap measures alignment between student need and support:
 
 ### 2. Intervention Coverage
 
-- Several schools exhibit positive coverage gaps, where not all high-risk students are receiving intervention support  
-- Negative gaps indicate proactive intervention strategies, where support extends beyond strictly high-risk populations  
+- All schools demonstrate neutral or negative coverage gaps, indicating that intervention support meets or exceeds identified student risk  
+- Larger negative gaps suggest that some schools are applying interventions beyond strictly high-risk populations, reflecting a proactive or preventative support strategy  
+- This pattern highlights an opportunity to evaluate whether intervention resources are optimally targeted  
 
 ---
 
@@ -159,15 +167,6 @@ Based on the analysis, the following actions are recommended:
 - Dynamic filtering using slicers  
 - Context-aware DAX measures  
 - Intervention vs non-intervention comparison logic  
-
----
-
-## Project Structure
-
-- Screenshots: dashboard visuals  
-- SQL: data model and data generation scripts  
-- Power BI: `.pbix` file  
-- Docs: project explanation and notes  
 
 ---
 
