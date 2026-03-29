@@ -55,18 +55,28 @@ This view compares student risk levels to intervention coverage across schools. 
 
 ## Data Structure & Model
 
+### Data Model (Star Schema)
+
+![Data Model](screenshots/data-model.png)
+
+The data model is structured as a star schema centered on student-level data. Dimension tables provide context for schools, grades, subjects, dates, and interventions, while fact tables capture assessment performance, attendance, and intervention participation. This design enables flexible and accurate analysis across multiple dimensions.
+
+---
+
 A relational data model was built using SQL Server, consisting of:
 
 - **DimStudent** – student-level attributes  
 - **DimSchool** – school-level information  
 - **DimGrade** – grade structure  
+- **DimSubject** – subject-level classification  
+- **DimDate** – calendar and time-based attributes  
 - **DimIntervention** – intervention programs  
+
 - **FactAssessment** – student performance scores (Bench 1 and Bench 3)  
+- **FactAttendanceDaily** – daily attendance tracking  
 - **FactInterventionParticipation** – intervention participation, status, and sessions attended  
 
-The model supports filtering across schools, grades, and interventions while maintaining accurate aggregation and context-aware calculations.
-
----
+The model supports filtering across schools, grades, subjects, and interventions while maintaining accurate aggregation and context-aware calculations.
 
 ## Executive Summary
 
