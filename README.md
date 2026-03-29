@@ -169,7 +169,22 @@ Based on the analysis, the following actions are recommended:
 - Intervention vs non-intervention comparison logic  
 
 ---
+## Technical Implementation
 
+This project includes SQL scripts used to define the relational data model, generate mock data, and simulate realistic intervention outcomes.
+
+The SQL implementation is organized into three stages:
+
+- **01_schema_and_dimensions.sql**  
+  Defines the database structure, including dimension and fact tables, relationships, and seeded reference data.
+
+- **02_seed_and_mock_data.sql**  
+  Generates a realistic student population, attendance patterns, assessment scores, and intervention participation.
+
+- **03_realism_tuning.sql**  
+  Applies targeted adjustments to assessment results to simulate real-world intervention impact and validate analytical outcomes.
+
+These scripts demonstrate the full data pipeline from schema design to analytical dataset preparation.
 ## Assumptions and Caveats
 
 - Data is simulated and designed to reflect realistic educational trends  
