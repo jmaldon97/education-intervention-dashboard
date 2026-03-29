@@ -185,6 +185,31 @@ The SQL implementation is organized into three stages:
   Applies targeted adjustments to assessment results to simulate real-world intervention impact and validate analytical outcomes.
 
 These scripts demonstrate the full data pipeline from schema design to analytical dataset preparation.
+
+### DAX Measures
+
+This project uses DAX to define key business logic and analytical calculations within the Power BI model.
+
+The measures are designed to dynamically respond to filter context and support multi-dimensional analysis across schools, grades, and interventions.
+
+Key areas of implementation include:
+
+- **Risk Classification**  
+  Students are categorized into risk tiers based on combined academic and attendance indicators.
+
+- **KPI Calculations**  
+  Measures such as student counts, high-risk rates, intervention rates, and attendance rates provide a high-level performance overview.
+
+- **Coverage Analysis**  
+  The coverage gap metric evaluates alignment between student need and intervention support.
+
+- **Growth Measurement**  
+  Benchmark comparisons (Bench 1 to Bench 3) quantify academic improvement over time.
+
+- **Context-Aware Logic**  
+  Advanced measures use functions such as `CALCULATE`, `TREATAS`, and `ISINSCOPE` to ensure correct behavior across visuals and drilldowns.
+
+See the `/dax/measures.md` file for full measure definitions.
 ## Assumptions and Caveats
 
 - Data is simulated and designed to reflect realistic educational trends  
