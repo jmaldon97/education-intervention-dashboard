@@ -29,7 +29,29 @@ The dashboard connects:
 ![Intervention Analysis](screenshots/intervention.png)
 
 ---
+## Key Insights (Visual Walkthrough)
 
+### Intervention Coverage Alignment
+
+![Coverage Gap](screenshots/coverage-gap.png)
+
+All schools demonstrate negative or neutral coverage gaps, meaning intervention support meets or exceeds identified student risk. Larger negative gaps suggest that some schools are extending support beyond strictly high-risk students, reflecting a proactive or preventative approach while also presenting an opportunity to evaluate resource targeting.
+
+---
+
+### Intervention Effectiveness
+
+![Intervention Growth](screenshots/intervention-growth.png)
+
+Despite starting at a lower baseline, students in intervention programs show substantially higher growth between Bench 1 and Bench 3 compared to non-intervention peers, demonstrating that interventions are effectively improving student outcomes.
+
+---
+
+### Risk vs Intervention Alignment
+
+![Risk vs Intervention](screenshots/risk-vs-intervention.png)
+
+This view compares student risk levels to intervention coverage across schools. Variation in positioning highlights how well each school aligns support with need, with some schools demonstrating stronger alignment while others indicate opportunities to better target intervention resources.
 ## Project Background
 
 This project simulates an educational analytics environment focused on evaluating student performance and intervention effectiveness across multiple schools.
