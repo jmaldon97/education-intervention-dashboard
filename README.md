@@ -41,7 +41,7 @@ All schools demonstrate negative or neutral coverage gaps, meaning intervention 
 
 ### Intervention Effectiveness
 
-![Intervention Growth](screenshots/intervention-growth.png)
+![Intervention Growth](screenshots/intervention.png)
 
 Despite starting at a lower baseline, students in intervention programs show substantially higher growth between Bench 1 and Bench 3 compared to non-intervention peers, demonstrating that interventions are effectively improving student outcomes.
 
